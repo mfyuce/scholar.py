@@ -567,7 +567,7 @@ class ScholarArticleParser120726(ScholarArticleParser):
         for tag in div:
             if not hasattr(tag, 'name'):
                 continue
-            if str(tag).lower().find('.pdf'):
+            if str(tag).lower().find('.pdf')>-1:
                 if tag.find('div', {'class': 'gs_ttss'}):
                     self._parse_links(tag.find('div', {'class': 'gs_ttss'}))
 
